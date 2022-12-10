@@ -140,8 +140,8 @@ function buildCharts(sample) {
     var metadataSample = data.metadata.filter(data => data.id == sample);
     console.log(metadataSample);
     // Deliverable 3: 2. Create a variable that holds the first sample in the metadata array.
-    var selectedMetadata = metadataSample[0];
-    console.log(selectedMetadata);
+    //var selectedMetadata = metadataSample[0];
+    //console.log(selectedMetadata);
     // Deliverable 3: 3. Create a variable that holds the washing frequency.    
     var washFrequency = +metadataSample[0].wfreq;
     console.log(washFrequency);
@@ -162,11 +162,11 @@ function buildCharts(sample) {
           },
           bar: {color: "black"},
           steps: [
-            { range: [0, 2], color: "red" },
-            { range: [2, 4], color: "orange" },
-            { range: [4, 6], color: "yellow" },
-            { range: [6, 8], color: "lime" },
-            { range: [8, 10], color: "green" }]
+            {range: [0, 2], color: "red"},
+            {range: [2, 4], color: "orange"},
+            {range: [4, 6], color: "yellow"},
+            {range: [6, 8], color: "lime"},
+            {range: [8, 10], color: "green"}]
         }
       }
     ];
