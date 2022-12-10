@@ -1,0 +1,6 @@
+/* Jumbotron Image */
+.jumbotron {
+    background-image: url("../images/jumbotron_germ.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+}
