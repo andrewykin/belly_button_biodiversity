@@ -58,16 +58,17 @@ function buildMetadata(sample) {
 function buildCharts(sample) {
   // Deliverable 1: 2. Use d3.json to load the samples.json file 
   d3.json("samples.json").then((data) => {
+    
     console.log(data);
 
     // Deliverable 1: 3. Create a variable that holds the samples array. 
     var samplesArray = data.samples;
     console.log(samplesArray);
     // Deliverable 1: 4. Create a variable that filters the samples for the object with the desired sample number.
-    var desiredSample = samplesArray.filter(data => data.id == sample);
-    console.log(desiredSample);
+    var selectedID = samplesArray.filter(data => data.id == sample);
+    console.log(selectedID);
     // Deliverable 1: 5. Create a variable that holds the first sample in the array.
-    var firstSample = desiredSample[0];
+    var firstSample = selectedID[0];
     console.log(firstSample);
     // Deliverable 1: 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     var otuIds = firstSample.otu_ids;
@@ -104,9 +105,9 @@ function buildCharts(sample) {
         xanchor: 'center',
         y: -0.25,
         yanchor: 'center'
-        text: 'Top 10 bacterial species found in belly button'
+        text: 'Top 10 bacterial species found in belly button',
+        showarrow: false 
       }]
-
     };
 
     // Deliverable 1: 10. Use Plotly to plot the data with the layout. 
