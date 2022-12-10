@@ -65,10 +65,10 @@ function buildCharts(sample) {
     var samplesArray = data.samples;
     console.log(samplesArray);
     // Deliverable 1: 4. Create a variable that filters the samples for the object with the desired sample number.
-    var selectedID = samplesArray.filter(data => data.id == sample);
-    console.log(selectedID);
+    var desiredSample = samplesArray.filter(data => data.id == sample);
+    console.log(desiredSample);
     // Deliverable 1: 5. Create a variable that holds the first sample in the array.
-    var firstSample = selectedID[0];
+    var firstSample = desiredSample[0];
     console.log(firstSample);
     // Deliverable 1: 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     var otuIds = firstSample.otu_ids;
@@ -92,7 +92,7 @@ function buildCharts(sample) {
 
     // Deliverable 1: 9. Create the layout for the bar chart. 
     var barLayout = {
-      title: "Top 10 Bacteria Cultures Found"
+      title: "Top 10 Bacteria Cultures Found",
       yaxis: {
         tickmode: "array",
         tickvals: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
@@ -104,7 +104,7 @@ function buildCharts(sample) {
         x: 0.5,
         xanchor: 'center',
         y: -0.25,
-        yanchor: 'center'
+        yanchor: 'center',
         text: 'Top 10 bacterial species found in belly button',
         showarrow: false 
       }]
