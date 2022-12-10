@@ -114,11 +114,27 @@ function buildCharts(sample) {
     Plotly.newPlot("bar", barData, barLayout, {responsive: true});
     
     // Deliverable 2: 1. Create the trace for the bubble chart.
-
+    var bubbleData = [{
+      x: otuIds,
+      y: sampleValues,
+      text: otuLabels,
+      mode: 'markers',
+      marker: {
+        size: sampleValues,
+        color: otuIds,
+        colorscale: "viridis"
+      }
+    }];
     // Deliverable 2: 2. Create the layout for the bubble chart.
-
+    var bubbleLayout = {
+      title: "Bacteria Cultures Per Sample",
+      showlegend: false,
+      xaxis: {title: "OTU ID", automargin: true},
+      yaxis: {automargin: true},
+      hovermode: "closest"
+    };
     // Deliverable 2: 3. Use Plotly to plot the data with the layout.
-    
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout, {responsive: true});
 
     // Deliverable 3: 1. Create a variable that filters the metadata array for the object with the desired sample number.
 
