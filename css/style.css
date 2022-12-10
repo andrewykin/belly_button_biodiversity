@@ -1,0 +1,6 @@
+/* Jumbotron Image */
+.jumbotron {
+    background-image: url("../images/jumbrotron_banner.png");
+    background-size: 100%;
+    text-align: center;
+}
