@@ -1,4 +1,9 @@
 /* Jumbotron Image */
+
+.bg-image {
+    background-image: url("../images/jumbotron_germ.jpg");
+}
+
 .jumbotron {
     background-image: url("../images/jumbotron_germ.jpg");
     background-size: 100% 100%;
